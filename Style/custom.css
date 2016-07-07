@@ -1,0 +1,19 @@
+@charset "utf-8";
+.ui-footer h4.ui-title {
+	font-size: 0.8em;
+	font-weight: normal;
+}
+
+h3, H4 {
+	margin-bottom: 0;
+	text-align: justify;
+}
+
+h3+P, H4+P{
+	margin-top: 0;
+	text-align: justify;
+}
+
+p {
+	text-align: justify;
+}
