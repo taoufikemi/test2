@@ -14,5 +14,5 @@ A simple PhoneGap Build application.
 BENHAMMOU TAOUFIK
 </author>
 
-<preference name="phonegap-version" value="5.2.0" />
+<preference name="phonegap-version" value="cli-5.2.0" />
 </widget>
