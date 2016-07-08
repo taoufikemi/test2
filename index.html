@@ -12,6 +12,47 @@
 </head>
 
 <body>
+ <script>
+        var enabledAdMob = true; // easily enable/disable AdMob
+        var admobid = {};
+        if( /(android)/i.test(navigator.userAgent) ) 
+        { 
+            admobid = { // for Android
+                banner: 'ca-app-pub-3940256099942544/6300978111', // or DFP format "/6253334/dfp_example_ad"
+                interstitial: 'ca-app-pub-3940256099942544/1033173712'
+            };
+        } 
+        else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) 
+        {
+            admobid = { // for iOS
+                banner: 'ca-app-pub-3940256099942544/6300978111', // or DFP format "/6253334/dfp_example_ad"
+                interstitial: 'ca-app-pub-3940256099942544/1033173712'
+            };
+        } 
+        else 
+        {
+            admobid = { // for Windows Phone
+                banner: 'ca-app-pub-3940256099942544/6300978111', // or DFP format "/6253334/dfp_example_ad"
+                interstitial: 'ca-app-pub-3940256099942544/1033173712'
+            };
+        }
+ 
+        function initApp() 
+        {
+            if (enabledAdMob) 
+            {
+                AdMob.createBanner({
+                    adId: admobid.banner,
+                    position: AdMob.AD_POSITION.BOTTOM_CENTER,
+                    autoShow: true
+                });
+            }
+        }
+ 
+        document.addEventListener('deviceready', initApp, false);  
+    </script>
+
+
 <div id="menu" data-role="page" data-theme="d">
   <div data-role="header" data-theme="b">
   <img src="image/treasure_hunt_logo.png" width="300" height="96" alt="logo"/> </div>
@@ -20,6 +61,7 @@
     <li> <a href="#submenu1"> menu1 </a></li>
     <li> <a href="#page3"> menu 2 </a></li>
     <li> <a href="#page4"> menu3 </a></li>
+    <li><a href="#menu4">menu4</a></li>
     </ul>
   </div>
   <div data-role="footer" data-theme="b">
@@ -55,10 +97,117 @@
 		  This annual event is truly one for the people and by the people. Designated treasures are nominated in by guests of the Landon Hotel throughout the summer with the Hunt scheduled for the fall. </p>
 		<h3>Sponsors</h3>
 		<p>The primary sponsor of the Leisure Treasure Hunt is, of course, the Landon Hotel itself. Other sponsors (and their prizes) will be announced in a few short weeks.</p>
+		<ul data-role="listview" data-inset="true">
+		  <li><a href="#">
+		    <h3>Page</h3>
+		    <p>Lorem ipsum</p>
+		    </a></li>
+		  <li><a href="#">
+		    <h3>Page</h3>
+		    <p>Lorem ipsum</p>
+		    </a></li>
+		  <li><a href="#">
+		    <h3>Page</h3>
+		    <p>Lorem ipsum</p>
+		    </a></li>
+		  <li><a href="#">
+		    <h3>Page</h3>
+		    <p>Lorem ipsum</p>
+		    </a></li>
+	  </ul>
 	</div>
   <div data-role="footer" data-theme="b">
 		<h4>Leisure Treasure Hunt &copy; 2014</h4>
 	</div>
+</div>
+<div id="menu4" data-role="page" data-theme="c" data-add-back-btn="true" >
+  <div data-role="header" data-theme="b">
+    <h1>Why</h1>
+  </div>
+  <div data-role="content" data-theme="d">
+    <p>Because we all deserve some fun and adventure in our lives.</p>
+    <p>Because solving riddles stretches the mind and engages the spirit.</p>
+    <p>Because Leisure Treasure Hunt donates all proceeds to local charities.    </p>
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#content1" data-transition="flip">step1</a></li>
+      <li><a href="#step2" data-transition="flip">step2</a></li>
+      <li><a href="#step3" data-transition="flip">step3</a></li>
+      <li><a href="#step4" data-transition="flip">step4</a></li>
+    </ul>
+    </p>
+  </div>
+  <div data-role="footer" data-theme="b">
+    <h4>Leisure Treasure Hunt &copy; 2014</h4>
+  </div>
+</div>
+<div data-role="page" id="step2">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  
+<div class=ui-grid-a><ul class="ui-block-a">
+  <li>The Landon Hotel dinner</li>
+  <li>The Landon Hotel weekend</li>
+  <li>Explore California tour</li>
+</ul>
+<ul class="ui-block-b">
+  <li>Case of H+ Sports</li>
+  <li>Roux Academy Art course </li>
+  <li>Wisdom Pet Medicine Gift Certificate</li>
+</ul></div>
+  </div>
+  <div data-role="footer">
+    <h4>Leisure Treasure Hunt &copy; 2014</h4>
+  </div>
+</div>
+
+<div data-role="page" id="step3">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  <p>take action!! please</p>
+  <div data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+    <div data-role="collapsible">
+      <h3>Header</h3>
+      <p>Content</p>
+    </div>
+    <div data-role="collapsible" data-collapsed="true">
+      <h3>Header</h3>
+      <p>Content</p>
+    </div>
+    <div data-role="collapsible" data-collapsed="true">
+      <h3>Header</h3>
+      <p>Content</p>
+    </div>
+  </div>
+  </div>
+  <div data-role="footer">
+    <h4>Leisure Treasure Hunt &copy; 2014</h4>
+  </div>
+</div>
+
+<div data-role="page" id="step4">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+<div data-role="content">
+  <p>take action!! please</p>
+  <ul data-role="listview" data-theme="c">
+    <li data-role="list-divider">divider 1</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum turpis elementum augue ornare posuere. Phasellus sit amet dolor in mi hendrerit fringilla tempor at nisi. Ut dignissim vel felis tristique tempus. Donec tempus, turpis at cursus imperdiet, enim metus scelerisque augue, nec lobortis lacus augue gravida enim. </li>
+    <li data-role="list-divider">divider 2</li>
+    <li>Donec faucibus est sit amet ornare volutpat. Mauris id sem pellentesque, egestas est elementum, ornare magna.
+      How to PlayMauris id sem pellentesque, egestas est elementum, ornare magna. Morbi tincidunt faucibus malesuada. Morbi ac semper lacus. Sed tristique tempus diam ac viverra. </li>
+    <li data-role="list-divider">divider 3</li>
+    <li>Vivamus vel faucibus massa. Suspendisse porta sed ipsum eget lobortis
+      How Winners are ChosenLorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vestibulum turpis elementum augue ornare posuere. Phasellus sit amet dolor in mi hendrerit fringilla tempor at nisi. Ut dignissim vel felis tristique tempus. </li>
+  </ul>
+  
+  <div data-role="footer">
+    <h4>Leisure Treasure Hunt &copy; 2014</h4>
+  </div>
 </div>
 
 </body>

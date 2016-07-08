@@ -16,4 +16,15 @@ h3+P, H4+P{
 
 p {
 	text-align: justify;
+}#step2 div .ui-grid-a {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding-left: 32px;
 }
+.ui-grid-a .ui-block-b li {
+	padding-left: 5px;
+}
+div ul li {
+}
+
+[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;} 
