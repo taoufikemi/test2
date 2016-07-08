@@ -12,7 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
-<body onLoad="AdMob.prepareInterstitial({adId:admobid.interstitial, autoShow:autoshow});">
+<body>
  <script>
 var admobid = {};
 if( /(android)/i.test(navigator.userAgent) ) { 
@@ -51,10 +51,10 @@ document.addEventListener('deviceready', initApp, false);
   <img src="image/treasure_hunt_logo.png" width="300" height="96" alt="logo"/> </div>
   <div data-role="content">
   	<ul data-role="listview">
-    <li> <a href="#submenu1" onClick="AdMob.showInterstitial();"> menu1 </a></li>
+    <li onClick="AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:true});"> <a href="#submenu1"> menu1 </a></li>
     <li> <a href="#page3"> menu 2 </a></li>
     <li> <a href="#page4"> menu3 </a></li>
-    <li><a href="#menu4">menu4</a></li>
+    <li onClick="AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:true});"><a href="#menu4"> menu4</a></li>
     </ul>
   </div>
   <div data-role="footer" data-theme="b">
@@ -68,7 +68,7 @@ document.addEventListener('deviceready', initApp, false);
   </div>
   <div data-role="content">
   	<ul data-role="listview">
-    <li> <a href="#content1"> submenu1 </a></li>
+    <li onClick="AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:true});"> <a href="#content1"> submenu1 </a></li>
     <li> <a href="#page3"> submenu2 </a></li>
     
     </ul>
@@ -122,9 +122,9 @@ document.addEventListener('deviceready', initApp, false);
     <p>Because solving riddles stretches the mind and engages the spirit.</p>
     <p>Because Leisure Treasure Hunt donates all proceeds to local charities.    </p>
     <ul data-role="listview" data-inset="true">
-      <li><a href="#content1" data-transition="flip">step1</a></li>
+      <li onClick="AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:true});"><a href="#content1" data-transition="flip">step1</a></li>
       <li><a href="#step2" data-transition="flip">step2</a></li>
-      <li><a href="#step3" data-transition="flip">step3</a></li>
+      <li onClick="AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:true});"><a href="#step3" data-transition="flip">step3</a></li>
       <li><a href="#step4" data-transition="flip">step4</a></li>
     </ul>
     </p>
